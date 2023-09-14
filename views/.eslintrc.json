@@ -1,0 +1,33 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"parser": "babel-eslint",
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:security/recommended",
+		"prettier"
+	],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": ["react", "security", "prettier"],
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{ "useTabs": true, "endOfLine": "auto" },
+			{
+				"usePrettierrc": true
+			}
+		],
+		"react/prop-types": 0,
+		"arrow-body-style": ["error", "as-needed"],
+		"func-style": ["warn", "declaration", { "allowArrowFunctions": true }]
+	}
+}
